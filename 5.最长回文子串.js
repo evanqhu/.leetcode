@@ -8,12 +8,13 @@
 /**
  * @param {string} s
  * @return {string}
- * @description 双指针
+ * @description 中心扩展法 (双指针)
  */
 var longestPalindrome = function (s) {
   if (s.length < 2) return s;
 
   // 当前找到的最长回文串的起止位置
+  // 用两个指针存储最长回文串
   let left = 0;
   let right = 0;
 
@@ -50,7 +51,7 @@ var longestPalindrome = function (s) {
 // var longestPalindrome = function (s) {
 //   const n = s.length
 //   if (n < 2) return s;
-
+//   // 用 res 存储最长回文串
 //   let res = ""; // 初始化结果字符串为空
 
 //   // 定义一个函数，用于查找回文串
