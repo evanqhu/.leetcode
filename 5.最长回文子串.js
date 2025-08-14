@@ -34,7 +34,7 @@ var longestPalindrome = function (s) {
   };
 
   // 遍历字符串的每个字符，分别以单个字符（奇数长度回文）和相邻两个字符（偶数长度回文）为中心，调用 palindrom
-  for (let i = 0; i < s.length; i++) {
+  for (let i = 0; i < s.length - 1; i++) {
     palindrom(i, i);
     palindrom(i, i + 1);
   }
@@ -96,7 +96,7 @@ var longestPalindrome = function (s) {
 
 //   if (n < 2) return s;
 
-//   const dp = Array.from({ length: n }, () => Array(n).fill(false)); // 定义 dp 数组
+//   const dp = Array.from({ length: n }, () => Array(n).fill(false)); // 定义 dp 数组, n * n 的二维数组
 
 //   // 单个字符都是回文的
 //   for (let i = 0; i < n; i++) {
